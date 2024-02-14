@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TEMPERATURE CONVERTER</h1>
+        </header>
+        <div class="content">
+            <div class="top-content">
+                <div id="initial" class="box">
+                    <div id="enter-initial-value-here">
+                        <h3>Enter initial value here</h3>
+                    </div>
+                    <input type="text" id="initial-degree">
+                    <select id="initial-dropdown">
+                        <option value="Celcius" selected>Celcius</option>
+                        <option value="Fahrenheit">Fahrenheit</option>
+                        <option value="Reamur">Reamur</option>
+                        <option value="Kelvin">Kelvin</option>
+                    </select>
+                </div>
+                <div id="final" class="box">
+                    <div id="result-explanation">
+                        <h3>The conversion results will appear here</h3>
+                    </div>
+                    <div id="result">
+                        <h3></h3>
+                    </div>
+                    <select id="final-dropdown">
+                        <option value="Celcius" selected>Celcius</option>
+                        <option value="Fahrenheit">Fahrenheit</option>
+                        <option value="Reamur">Reamur</option>
+                        <option value="Kelvin">Kelvin</option>
+                    </select>
+                </div>
+            </div>
+            <div class="bottom-content">
+                <div id="button" class="box">
+                    <button id="convert-btn" class="btn">Convert</button>
+                    <button id="reverse-btn" class="btn" onclick="reverse()">Reverse</button>
+                    <button id="reset-btn" class="btn">Reset</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
