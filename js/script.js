@@ -8,12 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const resetBtn = document.getElementById('reset-btn');
     const resultExplanationElement = document.getElementById('result-explanation');
 
+    function isNumber(inputValue) {
+        const numberPattern = /^[0-9]+$/;
+        return numberPattern.test(inputValue);
+    }
     function convert() {
         const initialValue = parseFloat(initialInput.value);
         const initialUnit = initialDropdown.value;
         const finalUnit = finalDropdown.value;
         let result;
         let explanation = '';
+        if (!initialValue) {
+            alert("Please enter a value!");
+            return;
+        }
+        if (!isNumber(initialValue)) {
+            alert("Please enter a valid number!");
+            return;
+        }
         if (initialUnit === 'Celcius') {
             if (initialValue >  100 || initialValue <  0) {
                 alert("Input in Celsius should be within the range  0-100");
