@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultExplanationElement = document.getElementById('result-explanation');
 
     function isNumber(inputValue) {
-        const numberPattern = /^[0-9]+$/;
+        const numberPattern = /^-?[0-9]+(\.[0-9]+)?$/;
         return numberPattern.test(inputValue);
     }
     function convert() {
