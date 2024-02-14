@@ -101,9 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function reverse() {
-        const tempUnit = initialDropdown.value;
+        var tempUnit = initialDropdown.value;
         initialDropdown.value = finalDropdown.value;
         finalDropdown.value = tempUnit;
+        var temp = initialInput.value;
+        initialInput.value = resultOutput.textContent;
+        resultOutput.textContent = temp;
     }
 
     convertBtn.addEventListener('click', convert);
